@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 424828}
   - component: {fileID: 3324828}
   - component: {fileID: 2324828}
+  - component: {fileID: 8638430678290792421}
   m_Layer: 0
   m_Name: PRE_PRO_Cooking_pot_01_01
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 424830}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3324828
 MeshFilter:
@@ -84,6 +85,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8638430678290792421
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2355ea9738b8f1943bd8bc4d870bca22, type: 3}
 --- !u!1 &124830
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +108,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 424830}
-  - component: {fileID: 6524828}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -116,16 +130,3 @@ Transform:
   m_Father: {fileID: 424828}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6524828
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124830}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5875828, y: 0.7355425, z: 1.5902879}
-  m_Center: {x: -0.014595045, y: 0.37725893, z: -0.006424316}
