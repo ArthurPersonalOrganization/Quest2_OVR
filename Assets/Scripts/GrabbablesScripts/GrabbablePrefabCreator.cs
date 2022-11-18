@@ -9,9 +9,8 @@ public class GrabbablePrefabCreator : MonoBehaviour
     public GameObject objectToConvert;
     public Transform parent;
     public GameObject audioPrefab;
-    [Space(10)]
-    [Header("Make a SO")]
-    public GrabbableSO item;
+    public bool freeTransform;
+    public bool rotateTransform;
 
     private void Start()
     {
@@ -21,20 +20,15 @@ public class GrabbablePrefabCreator : MonoBehaviour
 
     public void CreateObjectFreeTransform()
     {
-        objectToConvert = AddComponents(0);
-        objectToConvert.transform.localPosition = Vector3.zero;
-        objectToConvert.transform.localScale = Vector3.one;
-        objectToConvert.transform.localRotation = Quaternion.identity;
-        objectToConvert.transform.SetParent(parent);
-      //  Instantiate(obj, Parent);
+        objectToConvert = AddComponents();
     }
 
     public void CreateObjectRotate()
     {
-        GameObject obj = AddComponents(0);
+        objectToConvert = AddComponents(2);
     }
 
-    private GameObject AddComponents(int option)
+    private GameObject AddComponents(int option = 0)
     {
         Rigidbody rigidB = objectToConvert.AddComponent(typeof(Rigidbody)) as Rigidbody;
         MeshCollider collider = objectToConvert.AddComponent(typeof(MeshCollider)) as MeshCollider;
@@ -60,7 +54,11 @@ public class GrabbablePrefabCreator : MonoBehaviour
                 break;
         }
         Instantiate(audioPrefab, objectToConvert.transform);
-        
+
+        objectToConvert.transform.localPosition = Vector3.zero;
+        objectToConvert.transform.localRotation = Quaternion.identity;
+        objectToConvert.transform.SetParent(parent);
+
         return objectToConvert;
     }
 

@@ -19,24 +19,5 @@ public class GrabblabePrefabEditor : Editor
         {
             grabTemplate.CreateObjectRotate();
         }
-        if (GUILayout.Button("Create Item from SO"))
-        {
-            if (grabTemplate.item != null)
-            { 
-                InstantiateSO(grabTemplate.item);
-            }
-            else
-            {
-                Debug.LogError("Item is empty");
-            }
-           
-        }
-    }
-
-    private void InstantiateSO(GrabbableSO item)
-    {
-        item = (GrabbableSO)ScriptableObject.CreateInstance(typeof(GrabbableSO));
-
-        
     }
 }
