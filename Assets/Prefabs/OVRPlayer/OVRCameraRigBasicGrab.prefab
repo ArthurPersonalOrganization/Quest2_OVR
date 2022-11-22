@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1442153556713201374}
   m_Layer: 0
-  m_Name: PLAYER
+  m_Name: OVRCameraRigBasicGrab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
