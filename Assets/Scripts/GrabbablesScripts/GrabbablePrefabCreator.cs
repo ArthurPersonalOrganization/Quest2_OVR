@@ -12,12 +12,6 @@ public class GrabbablePrefabCreator : MonoBehaviour
     public bool freeTransform;
     public bool rotateTransform;
 
-    private void Start()
-    {
-         
-
-    }
-
     public void CreateObjectFreeTransform()
     {
         objectToConvert = AddComponents();
